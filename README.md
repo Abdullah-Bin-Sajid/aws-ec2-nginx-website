@@ -102,3 +102,34 @@ See Project.png
 - CI/CD deployment pipeline
 - Docker containerization
 - Monitoring with CloudWatch
+
+---
+
+## 💼 Use Case
+
+This setup can be used by:
+
+• Small businesses needing a live website  
+• Personal portfolio hosting  
+• Startup landing pages  
+• Static business websites  
+
+---
+
+## 🎯 Why This Project Matters
+
+This project demonstrates real-world cloud deployment skills including:
+
+• Production-ready web server setup  
+• Real domain + HTTPS configuration  
+• Server automation using Bash  
+• Real internet accessible infrastructure  
+
+---
+
+## 📬 Contact
+
+Open to Cloud Engineering & Remote Opportunities.
+
+LinkedIn: www.linkedin.com/in/abdullah-sajid-azure
+GitHub: https://github.com/Abdullah-Bin-Sajid

@@ -1,36 +1,104 @@
-# AWS EC2 Nginx Website
+# AWS EC2 Nginx Website Deployment ☁️
 
-AWS EC2 Ubuntu server with Nginx web server, 
-Elastic IP, custom domain and SSL/HTTPS certificate
+This project demonstrates how to deploy a static website on AWS cloud using an Ubuntu EC2 instance, Nginx web server, Elastic IP, custom domain and HTTPS SSL certificate.
+
+This is my first Cloud Engineering project.
+
+---
 
 ## 🌐 Live Website
 https://abdullah.jo3.org
 
-## 🛠️ What I Built
+---
 
-- AWS EC2 Ubuntu server — setup & configured
-- Nginx web server — installed & deployed
-- Elastic IP — static IP configured
-- Custom Domain — DNS configured
-- SSL Certificate — HTTPS secured 🔒
-- SSH Access — Windows terminal via key pair
+## 🏗️ Architecture Overview
 
-## 📋 Tech Used
+User Browser → Domain (DNS) → Elastic IP → AWS EC2 → Nginx → Website
 
-AWS EC2 | Ubuntu Linux | Nginx | Bash | SSL/TLS | DNS
+---
 
-## 📸 Screenshot
+## 🚀 What I Implemented
 
-![Website Screenshot](screenshot.png)
+- Launched Ubuntu EC2 instance on AWS
+- Connected securely using SSH key pair
+- Installed and configured Nginx web server
+- Created and attached Elastic IP (static public IP)
+- Connected custom domain via DNS records
+- Installed SSL certificate using Certbot
+- Automated server setup using Bash script
 
-## ⚙️ Commands Used
+---
 
-```bash
-# Nginx install
+## 🛠️ Technologies Used
+
+- AWS EC2
+- Ubuntu Linux
+- Nginx
+- Bash Scripting
+- DNS Management
+- SSL/TLS (Certbot)
+
+---
+
+## ⚙️ Deployment Steps
+
+### 1️⃣ Connect to Server
+
+ssh -i key.pem ubuntu@13.50.68.147
+
+
+### 2️⃣ Install Nginx
+
 sudo apt update
 sudo apt install nginx -y
 
-# SSL certificate
+
+### 3️⃣ Deploy Website
+
+cd /var/www/html
+sudo nano index.html
+
+
+### 4️⃣ Install SSL Certificate
+
 sudo apt install certbot python3-certbot-nginx -y
 sudo certbot --nginx -d abdullah.jo3.org
-```
+
+
+---
+
+## 🤖 Automation Script
+
+The `setup.sh` script automates:
+- System update
+- Nginx installation
+- Firewall configuration
+
+Run:
+
+chmod +x setup.sh
+./setup.sh
+
+
+---
+
+## 📸 Project Screenshot
+See Project.png
+
+---
+
+## 📚 What I Learned
+
+- How cloud servers work in real production
+- How domains connect with servers using DNS
+- How HTTPS works in real deployment
+- How to automate server setup using Bash
+- Real-world web deployment workflow
+
+---
+
+## 🔮 Future Improvements
+
+- CI/CD deployment pipeline
+- Docker containerization
+- Monitoring with CloudWatch
